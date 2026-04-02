@@ -245,7 +245,7 @@ document.getElementById('giftBtn').addEventListener('click', function (e) {
     createParticles(e.clientX, e.clientY);
 
     setTimeout(() => {
-        window.open("https://ibb.co/0RQ2tt1Q", "_blank");
+        window.open("https://ibb.co/hFP9BCTR", "_blank");
     }, 800);
 });
 
