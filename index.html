@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Nisan Doğum Günü Kutlaması</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+    <div class="stars" id="stars"></div>
+    
+    <div class="content">
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-50 bg-black bg-opacity-50 backdrop-blur-md py-4 px-6">
+            <div class="container mx-auto flex flex-wrap justify-between items-center">
+                <div class="flex items-center">
+                    <span class="fancy-title text-3xl magic-text">9 Nisan</span>
+                </div>
+                <div class="block lg:hidden">
+                    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-accent hover:border-accent">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="nav-content" class="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto">
+                    <div class="lg:flex-grow text-center lg:text-right">
+                        <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 nav-link active hover-float">Ana Sayfa</a>
+                        <a href="#countdown" class="block mt-4 lg:inline-block lg:mt-0 nav-link hover-float">Geri Sayım</a>
+                        <!--
+                        <a href="#gallery" class="block mt-4 lg:inline-block lg:mt-0 nav-link hover-float">Galeri</a>
+                    -->
+                        <a href="#wishes" class="block mt-4 lg:inline-block lg:mt-0 nav-link hover-float">Dilekler</a>
+                        <a href="https://www.shopier.com/BugraAtakul/45811972" target="_blank" class="block mt-4 lg:inline-block lg:mt-0 bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4 hover-float hover-glow">
+                            Kahve Ismarla
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section id="home" class="section flex flex-col items-center justify-center min-h-screen relative">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            
+            <div class="cake-container mb-8 animate__animated animate__bounceIn floating">
+                <div class="cake-top glowing">
+                    <div class="decoration"></div>
+                    <div class="decoration"></div>
+                    <div class="decoration"></div>
+                </div>
+                <div class="cake glowing"></div>
+                <div class="candle"></div>
+                <div class="flame"></div>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 fancy-title rainbow-text animate__animated animate__fadeInUp">
+                Mutlu Yıllarr Cerom
+            </h1>
+            
+            <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-white animate__animated animate__fadeInUp animate__delay-1s magic-text">
+                9 Nisan
+            </h2>
+            
+            <p class="text-xl md:text-2xl max-w-lg px-4 text-center text-white animate__animated animate__fadeInUp animate__delay-2s">
+                Yeni yaşında sağlık, mutluluk, başarılarla dolu ve benimle güzel bir yıl geçirmeni diliyorum sevgilimm.
+            </p>
+            
+            <a href="https://www.shopier.com/BugraAtakul/45811972" target="_blank" class="btn-3d bg-gradient-to-r from-purple-700 to-purple-500 text-white mt-8 animate__animated animate__fadeInUp animate__delay-3s neon-border hover-glow">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                    Bana Bir Kahve Ismarla
+                </div>
+            </a>
+            
+            <div class="absolute bottom-10 animate__animated animate__fadeInUp animate__delay-4s">
+                <svg class="w-10 h-10 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+        
+        <!-- Countdown Section -->
+        <section id="countdown" class="section bg-black bg-opacity-30">
+            <div class="container mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center fancy-title rainbow-text">Doğum Gününe Kalan</h2>
+                
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <div class="card w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center glowing hover-scale">
+                        <span id="days" class="text-3xl md:text-5xl font-bold text-white">00</span>
+                        <span class="text-sm md:text-base text-gray-300">Gün</span>
+                    </div>
+                    
+                    <div class="card w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center glowing hover-scale">
+                        <span id="hours" class="text-3xl md:text-5xl font-bold text-white">00</span>
+                        <span class="text-sm md:text-base text-gray-300">Saat</span>
+                    </div>
+                    
+                    <div class="card w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center glowing hover-scale">
+                        <span id="minutes" class="text-3xl md:text-5xl font-bold text-white">00</span>
+                        <span class="text-sm md:text-base text-gray-300">Dakika</span>
+                    </div>
+                    
+                    <div class="card w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center glowing hover-scale">
+                        <span id="seconds" class="text-3xl md:text-5xl font-bold text-white">00</span>
+                        <span class="text-sm md:text-base text-gray-300">Saniye</span>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <div class="gift mx-auto heartbeat hover-shake">
+                        <div class="ribbon"></div>
+                    </div>
+                    <p class="mt-8 text-xl text-white max-w-lg mx-auto magic-text">
+                        Her yeni yaş, yeni başlangıçlar ve güzel anılar demektir. Doğum günün kutlu olsun Ceromm
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timeline Section -->
+        <section id="timeline" class="section">
+            <div class="container mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center fancy-title rainbow-text">Doğum Günü Zamanı</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content hover-float">
+                            <h3 class="text-xl font-bold mb-2 magic-text">Sabah</h3>
+                            <p>Güzel bir kahvaltı ile güne başlarsın.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content hover-float">
+                            <h3 class="text-xl font-bold mb-2 magic-text">Öğlen</h3>
+                            <p>Azıcık Bana Zaman ayırırsın konusuruss.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content hover-float">
+                            <h3 class="text-xl font-bold mb-2 magic-text">Akşamüstü</h3>
+                            <p>Arkadaşlarınla beraber dışarıda doğumgününü kutlarsın.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content hover-float">
+                            <h3 class="text-xl font-bold mb-2 magic-text">Akşam</h3>
+                            <p>Eve gelip annenlerle vakit geçirirsin ve yatmadan beni ararsınn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section 
+        <section id="gallery" class="section bg-black bg-opacity-30">
+            <div class="container mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center fancy-title rainbow-text">Galeri</h2>
+                
+                <div class="gallery">
+                    <div class="gallery-item sparkling">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="200" fill="url(#grad1)"/>
+                            <circle cx="150" cy="100" r="50" fill="#d8b4fe"/>
+                            <text x="150" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="white">Doğum Günü</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-item sparkling">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%">
+                            <defs>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#7e22ce;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="200" fill="url(#grad2)"/>
+                            <rect x="75" y="50" width="150" height="100" fill="#d8b4fe"/>
+                            <text x="150" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="white">11 Haziran</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-item sparkling">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%">
+                            <defs>
+                                <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="200" fill="url(#grad3)"/>
+                            <polygon points="150,50 200,150 100,150" fill="#f3e8ff"/>
+                            <text x="150" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="white">Kutlama</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-item sparkling">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%">
+                            <defs>
+                                <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#4c1d95;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="200" fill="url(#grad4)"/>
+                            <circle cx="100" cy="100" r="40" fill="#a855f7"/>
+                            <circle cx="200" cy="100" r="40" fill="#d8b4fe"/>
+                            <text x="150" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="white">Mutlu Yıllar</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-item sparkling">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%">
+                            <defs>
+                                <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#581c87;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="200" fill="url(#grad5)"/>
+                            <rect x="50" y="50" width="200" height="100" rx="20" ry="20" fill="#d8b4fe"/>
+                            <text x="150" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="white">Yeni Yaş</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-item sparkling">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="100%" height="100%">
+                            <defs>
+                                <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#6b21a8;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="200" fill="url(#grad6)"/>
+                            <circle cx="150" cy="100" r="70" fill="#f3e8ff"/>
+                            <text x="150" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="#6b21a8">Hediyeler</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    -->
+        <!-- Wishes Section -->
+        <section id="wishes" class="section">
+            <div class="container mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center fancy-title rainbow-text">Doğum Günü Dilekleri</h2>
+                
+                <div class="max-w-3xl mx-auto">
+                    <div class="wishes-container">
+                        <div class="wish hover-float">
+                            <p class="text-lg">"Umarım yeni yaşında istediğin kpss puanını alır ve atanırsın sevgilim."</p>
+                        
+                        </div>
+                        <div class="wish hover-float">
+                            <p class="text-lg">"Yeni yaşında bol bol gül mutlu ol Ama en önemlisi hep benim ol tamam mı Seni çok seviyorum iyi ki varsın 💖"</p>
+                      
+                        </div>
+                        <div class="wish hover-float">
+                            <p class="text-lg">"Yeni yaşında en çok beni sev olur mu 😄"</p>
+                        
+                        </div>
+                        <div class="wish hover-float">
+                            <p class="text-lg">"Seninle dünya daha güzel… doğum günün kutlu olsun"</p>
+                        
+                        </div>
+                        <div class="wish hover-float">
+                            <p class="text-lg">"Yeni yaşında umarım tüm dileklerin gerçekleşir İyi ki varsın Ceromm"</p>
+                        
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 text-center">
+                        <a href="https://www.shopier.com/BugraAtakul/45811972" target="_blank" class="btn-3d bg-gradient-to-r from-purple-700 to-purple-500 text-white neon-border hover-glow">
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                                </svg>
+                                Bana Bir Kahve Ismarla
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Section -->
+        <section id="interactive" class="section bg-black bg-opacity-30">
+            <div class="container mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center fancy-title rainbow-text">Doğum Günü Eğlencesi</h2>
+                
+                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card glowing hover-scale">
+                        <h3 class="text-2xl font-bold mb-4 magic-text">Dilek Tut</h3>
+                        <p class="mb-6">Doğum günü mumlarını üflemeden önce bir dilek tut (Bizi Dile)</p>
+                        <button id="wishBtn" class="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-full hover-float hover-glow">
+                            Mumu Üfle
+                        </button>
+                    </div>
+                    
+                    <div class="card glowing hover-scale">
+                        <h3 class="text-2xl font-bold mb-4 magic-text">Konfeti Patlatıcı</h3>
+                        <p class="mb-6">Kutlamayı başlatmak için konfeti patlatıcıları kullan </p>
+                        <button id="confettiBtn" class="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-full hover-float hover-glow">
+                            Konfeti Patlat
+                        </button>
+                    </div>
+                    
+                    <div class="card glowing hover-scale">
+                        <h3 class="text-2xl font-bold mb-4 magic-text">Havai Fişek Gösterisi</h3>
+                        <p class="mb-6">Doğum günün için havai fişek gösterisi başlat </p>
+                        <button id="fireworkBtn" class="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-full hover-float hover-glow">
+                            Havai Fişek Başlat
+                        </button>
+                    </div>
+                    
+                    <div class="card glowing hover-scale">
+                        <h3 class="text-2xl font-bold mb-4 magic-text">Sürpriz Hediye</h3>
+                        <p class="mb-6">Al bakalım Benden sana doğum günü hediyesi</p>
+                        <button id="giftBtn" class="bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-800 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-full hover-float hover-glow">
+                            Hediyeyi Aç
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-8 bg-black bg-opacity-50">
+            <div class="container mx-auto text-center">
+                <p class="text-white">Buğra Atakul © Tüm Hakları Saklıdır.</p>
+                <p class="text-gray-400 mt-2 magic-text">9 Nisan</p>
+                <div class="mt-4">
+                    <a href="https://www.shopier.com/BugraAtakul/45811972" target="_blank" class="text-purple-300 hover:text-purple-200 transition-colors hover-float">
+                        Kahve Ismarla
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <div id="confetti-container"></div>
+    <div id="fireworks-container"></div>
+    <div id="particles-container"></div>
+    <script src="add.js"></script>
+    </body>
+</html>
